@@ -1,15 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Svelte</title>
-    <script type="module" crossorigin src="/assets/index.d4dd9ac4.js"></script>
-    <link rel="stylesheet" href="/assets/index.87ccd677.css">
-  </head>
-  <body>
-    <div id="app"></div>    
-    
-  </body>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="./favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet" />
+
+	<!-- Vendor CSS Files -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="vendor/icofont/icofont.min.css" rel="stylesheet" />
+	<link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+	<link href="vendor/animate.css/animate.min.css" rel="stylesheet" />
+	<link href="vendor/remixicon/remixicon.css" rel="stylesheet" />
+	<link href="vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
+	<link href="vendor/venobox/venobox.css" rel="stylesheet" />
+	<link href="vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" />
+	<link href="vendor/aos/aos.css" rel="stylesheet" />
+
+	<!-- Template Main CSS File -->
+	<link href="css/heroes.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+
+	<!-- <script>
+		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark')
+		} else {
+			document.documentElement.classList.remove('dark')
+		}
+	</script>
+	 -->
+	<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_layout-632ba1fa.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-23e9ef5a.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-1ae2b55d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-c9707bf8.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-a4cd6eff.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-97ed9c90.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/local-87506ae4.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.ts-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-fdfb35bb.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_page.ts-dc85b7cd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_page-da46b06b.js">
+</head>
+
+<body data-sveltekit-preload-data="hover" class="dark:bg-gray-900 dark:text-gray-100">
+	<div style="display: contents">
+
+
+<header id="header" class="fixed-top d-flex align-items-center header-transparent "><div class="d-flex align-items-center container"><div class="logo mr-auto"><h1 class="text-light"><a href="/"><img src="logos/lanis.png" alt="lanis logo"></a></h1>
+			
+			</div>
+		<nav class="nav-menu d-none d-lg-block"><ul><li class="active"><a href="/">Beranda</a></li>
+				<li><a href="/about">Tentang</a></li>
+				<li><a href="/about">Produk</a></li>
+				<li><a href="/about">Portofolio</a></li>
+				<li><a href="/about">Team</a></li>
+				
+				
+				<li><a href="/about">Kontak</a></li></ul>
+		</nav></div></header>
+
+
+
+<section id="hero" class="d-flex flex-column justify-content-end align-items-center"><div class="col-xxl-8 container px-4 py-5"><div class="row flex-lg-row-reverse align-items-center g-5 py-5"><div class="col-10 col-sm-8 col-lg-6"><img src="images/lanis/hero/greenearth.jpg" class="d-block mx-lg-auto img-fluid rounded" alt="Lanis IT Support" width="700" height="768" loading="lazy"></div>
+			<div class="col-lg-6"><h1 class="display-5 fw-bold lh-1 mb-3 text-white">Lanis IT Support</h1>
+				<p class="lead">Menghasilkan produk yang berinovasi serta mampu menjangkau ke seluruh pelosok
+					negeri</p></div></div></div>
+
+	<svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none"><defs><path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="wave1"><use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"></use></g><g class="wave2"><use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"></use></g><g class="wave3"><use xlink:href="#wave-path" x="50" y="9" fill="#fff"></use></g></svg></section>
+<main id="main"><section id="about" class="about"><div class="container"><div class="section-title" data-aos="zoom-out"><h2>Tentang</h2>
+			<p>Siapa Kita</p></div>
+
+		<div class="row content" data-aos="fade-up"><div class="col-lg-6"><h3>Latar Belakang Perusahaan</h3>
+				<p>LANIS ITSM merupakan sebuah Badan Usaha yang berdiri pada tahun 2007 yang diprakarsai oleh Teguh Mardiansyah sekaligus sebagai owner hingga sekarang.</p>
+				<p>LANIS ITSM melayani seluruh kebutuhan pengguna terhadap perangkat teknologi informasi seperti :</p>
+				<ul><li><i class="ri-check-double-line"></i>Perbaikan</li>
+					<li><i class="ri-check-double-line"></i>Perawatan</li>
+					<li><i class="ri-check-double-line"></i>Pengadaan Perangkat</li></ul></div>
+			<div class="col-lg-6 pt-lg-0 pt-4"><p>Usaha ini bergerak dibidang layanan jasa support teknis perangkat teknologi informasi, atau lebih dikenal dikalangan masyarakat dengan sebutan layanan jasa service on call.LANIS ITSM melayani seluruh kebutuhan pengguna terhadap perangkat teknologi seperti komputer, laptop, CCTV, jaringan LAN, WiFi, ISP (Internet Service Provider), Smart City, Smart Village, dan lain-lain.</p>
+				<a href="/" class="btn-learn-more">Baca lagi</a></div></div></div></section>
+	<section id="features" class="features"><div class="container"><ul class="nav nav-tabs row d-flex"><li class="nav-item col-3" data-aos="zoom-in"><a class="nav-link active show" data-toggle="tab" href="#tab-1"><i class="ri-home-wifi-line"></i>
+					<h4 class="d-none d-lg-block">Desa Pintar</h4></a></li>
+			<li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100"><a class="nav-link" data-toggle="tab" href="#tab-2"><i class="ri-smartphone-line"></i>
+					<h4 class="d-none d-lg-block">Aplikasi Mobile</h4></a></li>
+			<li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200"><a class="nav-link" data-toggle="tab" href="#tab-3"><i class="ri-camera-lens-line"></i>
+					<h4 class="d-none d-lg-block">CCTV</h4></a></li>
+			<li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300"><a class="nav-link" data-toggle="tab" href="#tab-4"><i class="ri-body-scan-line"></i>
+					<h4 class="d-none d-lg-block">Internet Of Things</h4></a></li></ul>
+
+		<div class="tab-content" data-aos="fade-up"><div class="tab-pane active show" id="tab-1"><div class="row"><div class="col-lg-6 order-lg-1 mt-lg-0 order-2 mt-3"><h3>Desa Smart Village di Era Teknologi 4.0</h3>
+						<p class="font-italic">Smart Village adalah wilayah pedesaan yang mengintegrasikan teknologi dalam tata kehidupan sehari-hari yang akan mempermudah warga desa dalam melaksanakan kegiatan dan berkomunikasi.</p>
+						<p>Adapun manfaat Smart Village yaitu :</p>
+						<ul><li><i class="ri-check-double-line"></i> Meningkatkan pengetahuan warga desa terhadap teknologi yang semakin maju.</li>
+							<li><i class="ri-check-double-line"></i> Mempermudah pelaksanaan kegiatan warga desa.</li>
+							<li><i class="ri-check-double-line"></i> Membantu komunikasi antara masyarakat desa dengan pemerintah desa.</li>
+							<li><i class="ri-check-double-line"></i> Meningkatkan kualitas internet didalam desa agar tersebar luas dan dapat dinikmati seluruh warga desa.</li></ul></div>
+					<div class="col-lg-6 order-lg-2 order-1 text-center"><img src="images/lanis/features/features-1.png" alt="" class="img-fluid"></div></div></div>
+			<div class="tab-pane" id="tab-2"><div class="row"><div class="col-lg-6 order-lg-1 mt-lg-0 order-2 mt-3"><h3>Gayatri <strong>Desa dalam satu genggaman</strong></h3>
+						<p>LANIS IT Support and Maintenance merancang applikasi mobile bernama 'Gayatri' yang dapat diunduh secara manual pda perangkat android. Gayatri berfungsi membantu masyarakat desa dalam berkomunikasi dengan pemerintah desa dan menyebarluaskan informasi desa secara luas dan menyeluruh. Didalam applikasi Gayatri terdapat berbagai macam menu seperti CCTV desa, Agenda desa, Lapor (melaporkan kejadian desa), dan lain-lain.</p>
+						<p>Adapun manfaat Smart Village yaitu :</p>
+						<ul><li><i class="ri-check-double-line"></i> Memudahkan komunikasi antara masyarakat desa dengan pemerintah desa.</li>
+							<li><i class="ri-check-double-line"></i> Mengawasi desa dengan lebih mudah.</li>
+							<li><i class="ri-check-double-line"></i> Menyebarkan informasi desa secara luas dan menyeluruh.</li></ul>
+						<p class="font-italic">Mobile apps adalah program aplikasi yang dirancang untuk pengembangan yang terdapat dalam perangkat genggam.</p></div>
+					<div class="col-lg-6 order-lg-2 order-1 text-center"><img src="images/lanis/features/features-2.png" alt="" class="img-fluid"></div></div></div>
+			<div class="tab-pane" id="tab-3"><div class="row"><div class="col-lg-6 order-lg-1 mt-lg-0 order-2 mt-3"><h3>CCTV Online</h3>
+						<p>Closed Circuit Television yang biasa kita kenal dengan CCTV adalah camera pengawas yang terpasang pada sisi-sisi ruangan atau sudut yang dirasa butuh pengawasan lebih untuk meningkatkan keamanan dan gambar yang ditangkap bisa langsung kita pantau melalui smartphone. CCTV biasa digunakan untuk kelengkapan keamanan didalam industri-industri seperti militer, bandara, toko, pabrik, kantor dan bahkan perumahan pun juga sudah mulai menggunakan CCTV.</p>
+						<ul><li><i class="ri-check-double-line"></i> Mengawasi ruangan/gedung dari jarak jauh (melalui smartphone).</li>
+							<li><i class="ri-check-double-line"></i> Meningkatkan keamanan, Menjadikan video yang terekam CCTV sebagai barang bukti jika terjadi kehilangan atau tindak kriminal lainnya.</li>
+							<li><i class="ri-check-double-line"></i> Meningkatkan keamanan, Menjadikan video yang terekam CCTV sebagai barang bukti jika terjadi kehilangan atau tindak kriminal lainnya.</li></ul></div>
+					<div class="col-lg-6 order-lg-2 order-1 text-center"><img src="images/lanis/features/features-3.png" alt="" class="img-fluid"></div></div></div>
+			<div class="tab-pane" id="tab-4"><div class="row"><div class="col-lg-6 order-lg-1 mt-lg-0 order-2 mt-3"><h3>The Internet Of Things di Desa</h3>
+						<p>Internet of Things (Internet untuk segala) adalah upaya untuk mengembangkan konektivitas internet yang tersambung dengan berbagai macam perangkat yng digunakan masyarakat dalam sehari-hari untuk memudahkan pekerjaan tanpa terbatas ruang dan waktu.</p>
+						<p>Adapun manfaat Internet Of Things yaitu :</p>
+						<ul><li><i class="ri-check-double-line"></i>
+								<strong>Pengusir Hama,</strong>dengan masuknya IoT pada bidang pertanian akan membantu para petani untuk mengusir hama dengan sensor yang terpasang disetiap sisi sawah.</li>
+							<li><i class="ri-check-double-line"></i>
+								<strong>Sensor Bencana Banjir,</strong>sensor yang diberikan pada pinggir-pinggir sungai akan membantu warga yang tinggal didekat sungai lebih waspada terhadap banjir atau meluapnya debit air. Warga akan mendapatkan peringatan yang lebih dini melalui mobile apps yang tersambung dengan sensor bencana.</li>
+							<li><i class="ri-check-double-line"></i>
+								<strong>Menyiram Tanaman,</strong>dengan adanya IoT yang terhubung pada beberapa titik diperkebunan, petani dapat mengontrol jarak jauh menyalakan mesin air (springkle) yang akan menyiram perkebunan.</li>
+							<li><i class="ri-check-double-line"></i>
+								<strong>Irigasi Air Sawah,</strong>jika IoT terintegrasi dengan smartphone dan sensor yang berada ditepi sawah, maka pengairan sawah dapat dilakukan secara otomatis dan akan menghemat tenaga untuk mengirigasi sawah.</li></ul></div>
+					<div class="col-lg-6 order-lg-2 order-1 text-center"><img src="images/lanis/features/features-4.png" alt="" class="img-fluid"></div></div></div></div></div></section>
+	<section id="cta" class="cta"><div class="container"><div class="row" data-aos="zoom-out"><div class="col-lg-9 text-lg-left text-center"><h3>Call To Action</h3>
+				<p>Kami dapat membantu memenuhi kebutuhan perangkat teknologi Anda. Klik untuk menghubungi!</p></div>
+			<div class="col-lg-3 cta-btn-container text-center"><a class="cta-btn align-middle" href="tel:+6287865437170">Call To Action</a></div></div></div></section>
+	
+
+
+<section id="services" class="services"><div class="container"><div class="section-title" data-aos="zoom-out"><h2>Produk</h2>
+			<p>YANG KAMI TAWARKAN</p></div>
+
+		<div class="row"><div class="col-lg-4 col-md-6"><div class="icon-box" data-aos="zoom-in-left"><div class="icon"><i class="las la-camera" style="color: #ff689b;"></i></div>
+					<h4 class="title"><a href="">CCTV</a></h4>
+					<p class="description">CCTV memiliki fungsi serta tujuan yang pastinya untuk menghindari kejahatan yang seringkali terjadi belakangan ini. Hal ini juga untuk perilaki kriminal, serta membantu memonitoring atau mengawasi situasi.</p></div></div>
+			<div class="col-lg-4 col-md-6 mt-md-0 mt-5"><div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100"><div class="icon"><i class="las la-home" style="color: #e9bf06;"></i></div>
+					<h4 class="title"><a href="">Village Area Network</a></h4>
+					<p class="description">Smart Village adalah wilayah pedesaan yang mengintegrasikan teknologi dalam tata kehidupan sehari-hari yang akan mempermudah warga desa dalam melaksanakan kegiatan dan berkomunikasi.</p></div></div>
+
+			<div class="col-lg-4 col-md-6 mt-lg-0 mt-5 "><div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200"><div class="icon"><i class="las la-video" style="color: #3fcdc7;"></i></div>
+					<h4 class="title"><a href="">Video Conference</a></h4>
+					<p class="description">Teknologi telekomunikasi yang memungkinkan dua pihak atau lebih dapat berinteraksi dilokasi yang berbeda melalui audio dan video yang terbuhung secara bersamaan. Biasanya digunakan untuk sektor bisnis, penggunaan pribadi, bidang pendidikan maupun kesehatan.</p></div></div>
+			<div class="col-lg-4 col-md-6 mt-5"><div class="icon-box" data-aos="zoom-in-left"><div class="icon"><i class="las la-network-wired" style="color:#41cf2e;"></i></div>
+					<h4 class="title"><a href="">Local Area Network</a></h4>
+					<p class="description">LAN dapat menghubungkan sebuah perangkat ke internet dengan menggunakan berbagai perangkat jaringan yang cukup sederhana. Seperti hanya dengan menggunakan kabel UTP (Unshielded Twisted-Pair), Hub, Switch, Router, dan lain sebagainya.</p></div></div>
+
+			<div class="col-lg-4 col-md-6 mt-5"><div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100"><div class="icon"><i class="las la-fingerprint" style="color: #d6ff22;"></i></div>
+					<h4 class="title"><a href="">Fingerprint</a></h4>
+					<p class="description">Mesin absensi sidik jari adalah jenis mesin absensi biometrik yang menggunakan metode kehadiran / absensi karyawan dengan mendeteksi sidik jari.</p></div></div>
+
+			<div class="col-lg-4 col-md-6 mt-5"><div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200"><div class="icon"><i class="las la-database" style="color: #4680ff;"></i></div>
+					<h4 class="title"><a href="">Network Attached Storage</a></h4>
+					<p class="description">Sistem NAS fleksibel dan terukur, NAS layaknya seperti memiliki cloud pribadi di kantor. Lebih cepat, lebih murah, dan memberikan semua manfaat cloud publik di lokasi, memberi Anda kendali penuh.</p></div></div></div>
+
+		<div class="col-lg-4 col-md-6 mt-5"><div class="icon-box" data-aos="zoom-in-left"><div class="icon"><i class="las la-mobile" style="color: #4680ff;"></i></div>
+				<h4 class="title"><a href="">Gayatri</a></h4>
+				<p class="description">Aplikasi untuk menunjang masyarakat di pedesaan. Serta mempercepat alur komunikasi baik antar masyarakat maupun dengan pemerintah desa terkait situasi terkini serta agenda di desa.</p></div></div></div></section>
+	<section id="portfolio" class="portfolio"><div class="container"><div class="section-title" data-aos="zoom-out"><h2>Portofolio</h2>
+			<p>YANG TELAH KAMI LAKUKAN</p></div>
+
+		<ul id="portfolio-flters" class="d-flex justify-content-end" data-aos="fade-up"><li data-filter="*" class="filter-active">All</li>
+			<li data-filter=".filter-cctv">CCTV</li>
+			<li data-filter=".filter-van">VAN</li>
+			<li data-filter=".filter-city">Smart City</li>
+			<li data-filter=".filter-partnership">Partnership</li></ul>
+
+		<div class="row portfolio-container" data-aos="fade-up"><div class="col-lg-4 col-md-6 portfolio-item filter-cctv"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio6.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Pemasangan CCTV di KOS Putri Riana</h4>
+					<p>CCTV</p>
+					<a href="images/lanis/portfolio/portofolio6.png" data-gall="portfolioGallery" class="venobox preview-link" title="Pemasangan CCTV di KOS Putri Riana"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-van"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio8.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Instalasi Infrastruktur Jaringan</h4>
+					<p>Desa Ngawen</p>
+					<a href="images/lanis/portfolio/portofolio8.png" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-van"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio18.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Instalasi Infrastruktur Jaringan</h4>
+					<p>Desa Ngawen</p>
+					<a href="images/lanis/portfolio/portofolio18.png" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-van"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio11.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Instalasi Infrastruktur Jaringan</h4>
+					<p>Desa Ngawen</p>
+					<a href="images/lanis/portfolio/portofolio11.png" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-van"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio12.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Instalasi Infrastruktur Jaringan</h4>
+					<p>Desa Ngawen</p>
+					<a href="images/lanis/portfolio/portofolio12.png" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-van"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio20.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Instalasi Infrastruktur Jaringan</h4>
+					<p>Desa Ngawen</p>
+					<a href="images/lanis/portfolio/portofolio20.png" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-van"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio21.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Instalasi Infrastruktur Jaringan</h4>
+					<p>Desa Ngawen</p>
+					<a href="images/lanis/portfolio/portofolio21.png" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-van"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio15.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Instalasi Infrastruktur Jaringan</h4>
+					<p>Desa Ngawen</p>
+					<a href="images/lanis/portfolio/portofolio15.png" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-city"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio17.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Program Smart City Tahap 1</h4>
+					<p></p>
+					<a href="images/lanis/portfolio/portofolio17.png" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-city"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio10.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Program Smart City Tahap 1</h4>
+					<p></p>
+					<a href="images/lanis/portfolio/portofolio10.png" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-city"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio19.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Program Smart City Tahap 1</h4>
+					<p></p>
+					<a href="images/lanis/portfolio/portofolio19.png" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-van"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio4.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Pemasangan Jaringan Internet</h4>
+					<p>Desa Ngawen</p>
+					<a href="images/lanis/portfolio/portofolio4.png" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-van"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio5.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Pemasangan Jaringan Internet</h4>
+					<p>Desa Ngawen</p>
+					<a href="images/lanis/portfolio/portofolio5.png" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+					</div></div>
+
+			<div class="col-lg-4 col-md-6 portfolio-item filter-partnership"><div class="portfolio-img"><img src="images/lanis/portfolio/portofolio9.png" class="img-fluid" alt=""></div>
+				<div class="portfolio-info"><h4>Kemitraan</h4>
+					<p></p>
+					<a href="images/lanis/portfolio/portofolio9.png" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+					</div></div></div></div></section>
+	<section id="testimonials" class="testimonials"><div class="container"><div class="section-title" data-aos="zoom-out"><h2>Testimoni</h2>
+			<p>PELANGGAN KAMI</p>
+			</div>
+
+		<div class="owl-carousel testimonials-carousel" data-aos="fade-up"><div class="testimonial-item"><p>
+					<img src="images/lanis/testimonials/BMT Bina Insanul Fikri (BIF).jpeg" class="testimonial-img" alt="">
+					</p>
+				
+				<h3>BMT Bina Insanul Fikri (BIF)</h3>
+				<h4>Yogyakarta</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/KOPMA.jpeg" class="testimonial-img" alt=""></p>
+				<h3>KOPMA UNY</h3>
+				<h4>Yogyakarta</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/KODAM V BRAWIJAYA.jpeg" class="testimonial-img" alt=""></p>
+				<h3>KODAM V BRAWIJAYA</h3>
+				<h4>Surabaya, Jawa Timur</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/CV. Aliet Green.jpeg" class="testimonial-img" alt=""></p>
+				<h3>CV. Aliet Green</h3>
+				<h4>Bantul, Yogyakarta</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/Manajemen Masjid Syuhada.jpeg" class="testimonial-img" alt=""></p>
+				<h3>Manajemen Masjid Syuhada Yogyakarta</h3>
+				<h4>Yogyakarta</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/PT. Patraniaga.jpeg" class="testimonial-img" alt=""></p>
+				<h3>PT. Patraniaga Pertamina</h3>
+				<h4>Yogyakarta</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/RS. Santa Elisabeth.jpeg" class="testimonial-img" alt=""></p>
+				<h3>RS Santa Elisabeth</h3>
+				<h4>Bantul, Yogyakarta</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/SMP N 8 Terban.jpeg" class="testimonial-img" alt=""></p>
+				<h3>SMP N 8 Terban</h3>
+				<h4>Yogyakarta</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/Residence.jpg" class="testimonial-img" alt=""></p>
+				<h3>Tembok Batu Residence</h3>
+				<h4>Yogyakarta</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/TK PG Primagama Group.jpeg" class="testimonial-img" alt=""></p>
+				<h3>TK PG Primagama Group</h3>
+				<h4>Yogyakarta</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/Yatim Mandiri Yogyakarta.jpeg" class="testimonial-img" alt=""></p>
+				<h3>Yatim Mandiri</h3>
+				<h4>Yogyakarta</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/YONIF Raider 500 Sikatan.jpeg" class="testimonial-img" alt=""></p>
+				<h3>Yonif Raider 500 Sikatan</h3>
+				<h4>Surabaya, Jawa Timur</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/Magelang.jpg" class="testimonial-img" alt=""></p>
+				<h3>Desa Baturono</h3>
+				<h4>Kec. Salam, Magelang</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/Magelang.jpg" class="testimonial-img" alt=""></p>
+				<h3>Desa Bondowoso</h3>
+				<h4>Kec. Mertoyudan, Magelang</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/Magelang.jpg" class="testimonial-img" alt=""></p>
+				<h3>Desa Jumoyo</h3>
+				<h4>Kec. Salam, Magelang</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/Magelang.jpg" class="testimonial-img" alt=""></p>
+				<h3>Desa Kalinegoro</h3>
+				<h4>Kec. Mertoyudan, Magelang</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/Magelang.jpg" class="testimonial-img" alt=""></p>
+				<h3>Desa Ngawen</h3>
+				<h4>Kec. Muntilan, Magelang</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/Magelang.jpg" class="testimonial-img" alt=""></p>
+				<h3>Desa Salam</h3>
+				<h4>Kec. Salam, Magelang</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/Magelang.jpg" class="testimonial-img" alt=""></p>
+				<h3>Desa Sambeng</h3>
+				<h4>Kec. Borobudur, Magelang</h4></div>
+
+			<div class="testimonial-item"><p><img src="images/lanis/testimonials/Magelang.jpg" class="testimonial-img" alt=""></p>
+				<h3>Desa Sucen</h3>
+				<h4>Kec. Salam, Magelang</h4></div></div></div>
+</section>
+	<section id="team" class="team"><div class="container"><div class="section-title" data-aos="zoom-out"><h2>Team</h2>
+			<p>TEAM KERJA KERAS KAMI</p></div>
+
+		<div class="row"><div class="col-lg-3 col-md-6 d-flex align-items-stretch"><div class="member" data-aos="fade-up"><div class="member-img"><img src="images/lanis/teams/Teguh Mardiansyah.jpg" class="img-fluid" alt="">
+						<div class="social"><a href="https://twitter.com/teguhlanis?s=20"><i class="icofont-twitter"></i></a>
+							<a href="https://www.facebook.com/teguhlanis"><i class="icofont-facebook"></i></a>
+							<a href="https://www.instagram.com/teguhlanis/?igshid=xklmzobgblhv"><i class="icofont-instagram"></i></a></div></div>
+					<div class="member-info"><h4>Teguh Mardiansyah</h4>
+						<span>Chief Executive Officer</span></div></div></div>
+
+			<div class="col-lg-3 col-md-6 d-flex align-items-stretch"><div class="member" data-aos="fade-up" data-aos-delay="100"><div class="member-img"><img src="images/lanis/teams/Yoga Ricky Triwahyuna.jpeg" class="img-fluid" alt="">
+						<div class="social"><a href="https://www.facebook.com/yoga.triwahyuna"><i class="icofont-facebook"></i></a>
+							<a href="https://www.instagram.com/rizcyyoga/?igshid=1ul021ou6vgxc"><i class="icofont-instagram"></i></a></div></div>
+					<div class="member-info"><h4>Yoga Ricky Triwahyuna</h4>
+						<span>Chief Operating Officer</span></div></div></div>
+
+			<div class="col-lg-3 col-md-6 d-flex align-items-stretch"><div class="member" data-aos="fade-up" data-aos-delay="200"><div class="member-img"><img src="images/lanis/teams/Random-3.jpg" class="img-fluid" alt="">
+						<div class="social"><a href="https://facebook.com"><i class="icofont-facebook"></i></a>
+							<a href="https://instagram.com"><i class="icofont-instagram"></i></a></div></div>
+					<div class="member-info"><h4>Galla Mahardicka</h4>
+						<span>Chief Marketing Officer</span></div></div></div>
+
+			<div class="col-lg-3 col-md-6 d-flex align-items-stretch"><div class="member" data-aos="fade-up" data-aos-delay="300"><div class="member-img"><img src="images/lanis/teams/Gildan.jpg" class="img-fluid" alt="">
+						<div class="social"><a href="https://twitter.com/GildanRamdani"><i class="icofont-twitter"></i></a>
+							<a href="https://www.facebook.com/profile.php?id=100008991674011"><i class="icofont-facebook"></i></a>
+							<a href="https://www.instagram.com/gron0312/?igshid=b7dz0r5lyms1"><i class="icofont-instagram"></i></a></div></div>
+					<div class="member-info"><h4>Gildan Roni Setya Ramdani</h4>
+						<span>Web &amp; Grapich Designer</span></div></div></div>
+
+			<div class="col-lg-3 col-md-6 d-flex align-items-stretch"><div class="member" data-aos="fade-up"><div class="member-img"><img src="images/lanis/teams/Rosiandi Iskandar.jpg" class="img-fluid" alt="">
+						<div class="social"><a href="https://www.facebook.com/rosi.a.iskandar"><i class="icofont-facebook"></i></a>
+							<a href="https://instagram.com/rosiandiiskandar?igshid=1ey18ri9gs3et"><i class="icofont-instagram"></i></a></div></div>
+					<div class="member-info"><h4>Rosiandi Iskandar</h4>
+						<span>Technician</span></div></div></div>
+
+			<div class="col-lg-3 col-md-6 d-flex align-items-stretch"><div class="member" data-aos="fade-up" data-aos-delay="100"><div class="member-img"><img src="images/lanis/teams/Jericho.jpeg" class="img-fluid" alt="">
+						<div class="social"><a href="https://twitter.com/Jrxchange1309_?s=20"><i class="icofont-twitter"></i></a>
+							<a href="https://www.facebook.com/ardiansyahjerico"><i class="icofont-facebook"></i></a>
+							<a href="https://instagram.com/ardians_jrc?igshid=cjk6u7b6ihsp"><i class="icofont-instagram"></i></a></div></div>
+					<div class="member-info"><h4>Jericho</h4>
+						<span>Technician</span></div></div></div>
+
+			<div class="col-lg-3 col-md-6 d-flex align-items-stretch"><div class="member" data-aos="fade-up" data-aos-delay="200"><div class="member-img"><img src="images/lanis/teams/Random.jpg" class="img-fluid" alt="">
+						<div class="social"><a href="https://twitter.com/azisek_?s=20"><i class="icofont-twitter"></i></a>
+							<a href="https://www.facebook.com/azis.riaz"><i class="icofont-facebook"></i></a>
+							<a href="https://instagram.com/azisek_?igshid=pp0py4w6b0hs"><i class="icofont-instagram"></i></a></div></div>
+					<div class="member-info"><h4>Rachma Aziz</h4>
+						<span>Mobile Apps Developer</span></div></div></div>
+
+			<div class="col-lg-3 col-md-6 d-flex align-items-stretch"><div class="member" data-aos="fade-up" data-aos-delay="300"><div class="member-img"><img src="images/lanis/teams/Random-5.jpg" class="img-fluid" alt="">
+						<div class="social"><a href="https://twitter.com/defrindr"><i class="icofont-twitter"></i></a>
+							<a href="https://facebook.com"><i class="icofont-facebook"></i></a>
+							<a href="https://instagram.com/defrindr?igshid=pm12ig4xk2xa"><i class="icofont-instagram"></i></a></div></div>
+					<div class="member-info"><h4>Defri Indra Mahardika</h4>
+						<span>Mobile Apps Developer</span></div></div></div>
+
+			<div class="col-lg-3 col-md-6 d-flex align-items-stretch"><div class="member" data-aos="fade-up"><div class="member-img"><img src="images/lanis/teams/Sandiko.jpeg" class="img-fluid" alt="">
+						<div class="social"><a href="https://twitter.com/sandiko_r?s=20"><i class="icofont-twitter"></i></a>
+							<a href="https://www.facebook.com/www.devillian.co.id"><i class="icofont-facebook"></i></a>
+							<a href="https://instagram.com/rsandi18?igshid=1qq3hd6p215d7"><i class="icofont-instagram"></i></a></div></div>
+					<div class="member-info"><h4>Raqhni Sandiko</h4>
+						<span>IoT Programmer</span></div></div></div>
+
+			<div class="col-lg-3 col-md-6 d-flex align-items-stretch"><div class="member" data-aos="fade-up" data-aos-delay="100"><div class="member-img"><img src="images/lanis/teams/Rasyid.jpeg" class="img-fluid" alt="">
+						<div class="social"><a href="https://twitter.com/r00xid"><i class="icofont-twitter"></i></a>
+							<a href="https://www.facebook.com/r00xid"><i class="icofont-facebook"></i></a>
+							<a href="https://instagram.com/annurdien?igshid=16rsqpstwcezg"><i class="icofont-instagram"></i></a></div></div>
+					<div class="member-info"><h4>Annurdien Rasyid</h4>
+						<span>IoT Programmer</span></div></div></div></div></div>
+</section>
+	<section id="contact" class="contact"><div class="container"><div class="section-title" data-aos="zoom-out"><h2>Tentang</h2>
+			<p>Siapa Kita</p></div>
+
+		<div class="row mt-5"><div class="col-lg-4" data-aos="fade-right"><div class="info"><div class="address"><a href="https://goo.gl/maps/r8bHLuNQhtM8hfNK9"><i class="icofont-google-map"></i></a>
+						<h4>Lokasi:</h4>
+						<p>Jl. Kaliurang KM 9.3 Gandok, Tambakan, Sinduharjo, Ngaglik, Sleman - Yogyakarta</p></div>
+
+					<div class="email"><a href="https://mail.google.com/mail/u/0/#inbox"><i class="icofont-envelope"></i></a>
+						<h4>Email:</h4>
+						<p>lanisteguh@gmail.com</p></div>
+
+					<div class="phone"><a href="tel:+6287865437170"><i class="icofont-phone"></i></a>
+						<h4>Telepon:</h4>
+						<p>+6287 865437170</p></div></div></div>
+
+			<div class="col-lg-8 mt-lg-0 mt-5" data-aos="fade-left"><form action="forms/mail.php" method="post" class="php-email-form"><div class="form-row"><div class="col-md-6 form-group"><input type="text" name="name" class="form-control" id="name" placeholder="Nama Kamu" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+							<div class="validate"></div></div>
+						<div class="col-md-6 form-group"><input type="email" class="form-control" name="email" id="email" placeholder="Email Kamu" data-rule="email" data-msg="Please enter a valid email">
+							<div class="validate"></div></div></div>
+					<div class="form-group"><input type="text" class="form-control" name="subject" id="subject" placeholder="Subjek" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+						<div class="validate"></div></div>
+					<div class="form-group"><textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+						<div class="validate"></div></div>
+					<div class="mb-3"><div class="loading">Loading</div>
+						<div class="error-message"></div>
+						<div class="sent-message">Your message has been sent. Thank you!</div></div>
+					<div class="text-center"><button type="submit">Kirim Pesan</button></div></form></div></div></div></section></main>
+<footer id="footer"><div class="container"><h3>LANIS IT Support &amp; Maintenance</h3>
+		<p>Menghasilkan produk yang berinovasi serta mampu menjangkau ke seluruh pelosok negeri</p>
+		<div class="social-links"><a href="https://twitter.com/Lanis_IT" class="twitter"><i class="bx bxl-twitter"></i></a>
+			<a href="https://facebook.com/lanis.lanis.52035" class="facebook"><i class="bx bxl-facebook"></i></a>
+			<a href="https://www.instagram.com/lanis.it/" class="instagram"><i class="bx bxl-instagram"></i></a>
+			<a href="mailto:lanisteguh@gmail.com" class="google-plus"><i class="bx bxl-google"></i></a>
+			<a href="https://wa.me/6287865437170" class="linkedin"><i class="bx bxl-whatsapp"></i></a></div>
+		<div class="language">
+			<a data-sveltekit-preload-code id="en">Bahasa Inggris</a>
+			
+			<a data-sveltekit-preload-code id="id">Bahasa Indonesia</a></div></div></footer>
+
+
+
+
+
+
+		<script type="module" data-sveltekit-hydrate="107yiu9">
+			import { start } from "./_app/immutable/start-23e9ef5a.js";
+
+			start({
+				env: {},
+				paths: {"assets":"","base":""},
+				target: document.querySelector('[data-sveltekit-hydrate="107yiu9"]').parentNode,
+				version: "1675217078910",
+				hydrate: {
+					node_ids: [0, 2],
+					data: [null,null],
+					form: null,
+					error: null
+				}
+			});
+		</script>
+	</div>
+</body>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="vendor/php-email-form/validate.js"></script>
+<script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="vendor/venobox/venobox.min.js"></script>
+<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="vendor/aos/aos.js"></script>
+<script src="vendor/local/main.js"></script>
+
 </html>
